@@ -24,7 +24,7 @@ export default function AddStudent({students, setStudents, handleAddStudent}) {
   } 
   
   const handleCheckbox = (event) => {
-    setCheckbox(event.target.value)
+    setCheckbox(event.target.checked)
   } 
   const handleSelect = (event) => {
     setSelect(event.target.value)
@@ -51,6 +51,15 @@ export default function AddStudent({students, setStudents, handleAddStudent}) {
       clone.unshift(newStudent)
       return clone
     })
+
+    //correción: aplicar actualización de contenido
+    setText(''); 
+    setUrl(''); 
+    setTel(''); 
+    setEmail(''); 
+    setCheckbox(false); 
+    setSelect('-- None --'); 
+    setNumber(2023);
   }
  
 
